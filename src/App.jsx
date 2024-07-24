@@ -13,11 +13,11 @@ function App() {
   return (
     <>
      
-     {/* <Header /> */}
+     <Header />
 
      <Mood hari="Senin" />
-{/*      
-     <MenuResto /> */}
+     
+     <MenuResto />
 
 
     </>

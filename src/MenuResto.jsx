@@ -1,4 +1,5 @@
 
+import Button from "./Button";
 import "./MenuResto.css"
 
 function MenuResto(){
@@ -30,6 +31,8 @@ function MenuResto(){
 								<div className="menu-item" key="{index}">
 									Menu: {item.nama} - 
 									Harga: {item.harga}
+
+									<Button />
 								</div>
 							)
 					})
