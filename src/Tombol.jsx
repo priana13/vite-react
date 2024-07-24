@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-function Button(props){
+function Tombol(props){
     
     const [counter , setCounter] = useState(0);
 
@@ -14,13 +14,9 @@ function Button(props){
         console.log('Saya di klik ' + newCounter);
     }
 
-    useEffect(()=> {
-        console.log(`Jumlah Like: ${counter}`)
-    });
-
     return (
         <button onClick={()=> clickHandler('Priana')}>{props.label} ({counter})</button>
     )
 }
 
-export default Button
+export default Tombol

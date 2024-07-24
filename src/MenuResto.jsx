@@ -1,6 +1,7 @@
 
 import Button from "./Button";
 import "./MenuResto.css"
+import Tombol from "./Tombol";
 
 function MenuResto(){
 
@@ -30,9 +31,11 @@ function MenuResto(){
 						return (
 								<div className="menu-item" key="{index}">
 									Menu: {item.nama} - 
-									Harga: {item.harga}
+									Harga: {item.harga} <br/>
 
-									<Button />
+									<Button label="Beli" />
+
+									<Tombol label="Like" />
 								</div>
 							)
 					})
