@@ -2,6 +2,10 @@
 import "./MenuResto.css"
 
 function MenuResto(){
+
+	const isMakanan = false;
+
+	const isFree = true;
 	
 
 	return (
@@ -10,9 +14,9 @@ function MenuResto(){
 					Menu: Nasi Bakar
 				</div>
 
-				<div>
-					Harga: Rp. 25.000
-				</div>
+				{(isMakanan == true) ? (<div>Makanan</div>) : (<div>Minuman </div>)}
+
+				{(isFree == false) && (<div>Harga: 75.000</div>)}
 
 			</div>
 		)
