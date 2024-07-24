@@ -2,6 +2,7 @@
 import Header from './Header'
 
 import MenuResto from './MenuResto'
+import Mood from './Mood';
 
 
 function App() {
@@ -12,9 +13,11 @@ function App() {
   return (
     <>
      
-     <Header />
-     
-     <MenuResto />
+     {/* <Header /> */}
+
+     <Mood hari="Senin" />
+{/*      
+     <MenuResto /> */}
 
 
     </>
