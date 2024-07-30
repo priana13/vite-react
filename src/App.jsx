@@ -6,6 +6,8 @@ import Header from './Header'
 import MenuResto from './MenuResto'
 import Mood from './Mood';
 
+import Contek from './Contek';
+
 
 function App() {
 
@@ -60,7 +62,9 @@ function App() {
      <br />
      <button onClick={() => handlerLokasi()}>Ganti Lokasi</button>
 
-
+      <br />
+      <br />
+      <Contek />
     </>
   )
 }
