@@ -1,5 +1,9 @@
 # React + Vite
 
+belajar dasar react js dari channel youtube: Programming di Rumahafif 
+
+link belajar: Tutorial React Js Pemula -> https://www.youtube.com/watch?v=CRlKVaXqZXA
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
