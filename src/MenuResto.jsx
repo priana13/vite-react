@@ -1,7 +1,7 @@
 
+import { useMemo, useState } from "react";
 import Button from "./Button";
 import "./MenuResto.css"
-import Tombol from "./Tombol";
 
 function MenuResto(){
 
@@ -9,13 +9,16 @@ function MenuResto(){
 
 	const isFree = true;
 
+	const [counter , setCounter] = useState(0);
 	const menu = [
-		 { nama: 'Nasi Bakar', harga: 'Rp. 10.000'},
-		 { nama: 'Mie Ayam', harga: 'Rp. 15.000'},
-		 { nama: 'Ayam Bakar', harga: 'Rp. 17.000'},
-			
+		 { nama: 'Nasi Bakar', harga: 'Rp. 10.000'}				
 		];
 	
+	const pesanLike = () => {
+		setCounter(counter + 1);
+	}	
+
+	const displayPesanLike = useMemo(() => pesanLike() , []);
 
 	return (
 			<div> 
@@ -33,9 +36,9 @@ function MenuResto(){
 									Menu: {item.nama} - 
 									Harga: {item.harga} <br/>
 
-									<Button label="Beli" />
+									<Button label="Like" />
 
-									<Tombol label="Like" />
+									<button onClick={()=> pesanLike()}>Subscribe ({counter})</button>
 								</div>
 							)
 					})
