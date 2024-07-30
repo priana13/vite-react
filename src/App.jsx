@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import ChildComponent from './ChildComponent';
 import Header from './Header'
 
@@ -13,20 +13,25 @@ function App() {
 
   const [lokasi, setLokasi] = useState("Bogor");
 
-  function handlerName(){
+  const handlerName = useCallback(
+    () => {
 
-    if(name == 'Priana'){
+      if(name == 'Priana'){
+  
+        setName("Jahtra");
+  
+      } else{
+  
+        setName("Priana");
+      }
+      
+    },
+    [name] // hanya jika name berubah maka akan di render ulang
+  ) 
 
-      setName("Jahtra");
+  const  handlerLokasi = () => {
 
-    } else{
-
-      setName("Priana");
-    }
-    
-  }
-
-  function handlerLokasi(){
+    console.log('render lokasi berubah')
 
     if(lokasi == 'Bogor'){
 
@@ -49,12 +54,9 @@ function App() {
      
      <MenuResto />
 
-     <ChildComponent name={name} />
+     <ChildComponent name={name} aksi={handlerName} />
     
-     <p>Lokasi : {lokasi}</p>
-
-     <button onClick={() => handlerName()}>Ganti Nama</button>
-     
+     <p>Lokasi : {lokasi}</p>     
      <br />
      <button onClick={() => handlerLokasi()}>Ganti Lokasi</button>
 

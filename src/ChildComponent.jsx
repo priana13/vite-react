@@ -1,14 +1,17 @@
 import {memo} from 'react'
 
 export default memo(
-    
-    function ChildComponent({name}){
 
-        console.log("Child Component Rendered")
+    function ChildComponent(props){
+
+        console.log("Child Component Nama Rendered")
     
         return (<>
     
-            <h3>Hallo {name}</h3>
+            <h3>Hallo {props.name}</h3>
+
+            <button onClick={props.aksi}>Ganti Nama</button>
+
     
         </>)
     }
